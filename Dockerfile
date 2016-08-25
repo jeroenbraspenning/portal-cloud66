@@ -1,4 +1,4 @@
-FROM node:4.0
+FROM node:6.3.0
 
 # Set the work directory
 RUN mkdir -p /var/www/app/current

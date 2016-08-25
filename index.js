@@ -1,6 +1,7 @@
 var mongoose = require('mongoose')
 var config = require('./config.js')
 console.log(config)
+console.log(process.env)
 mongoose.connect('mongodb://' + config.host + '/' + config.database)
 
 var db = mongoose.connection
@@ -16,4 +17,12 @@ db.once('open', function () {
     console.log(err)
     console.log(doc)
   })
+
+  setInterval(function () {
+    var silence = new Kitten({ name: 'Silence' })
+    silence.save(function (err, doc) {
+      console.log(err)
+      console.log(doc)
+    })
+  }, 5000)
 })

@@ -1,14 +1,12 @@
 {
-  "name": "portal",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "name": "cloud66-test",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "mongoose": "^4.5.10"
+    "mongoose": "^4.5.10",
+    "pm2": "^1.1.3"
   }
 }
